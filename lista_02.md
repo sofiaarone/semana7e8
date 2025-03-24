@@ -137,6 +137,8 @@ B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você 
 C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Você é um adulto!". Se não estiver nesse intervalo, imprime "Você está na melhor idade!".
 
 D) O código verifica se a idade é menor de 18, entre 18 e 60 ou acima de 60, imprimindo uma mensagem específica para cada caso.
+
+**R: Alternativa "b".**
 ______
 
 **4)** Qual será o resultado impresso no console após a execução do seguinte código?

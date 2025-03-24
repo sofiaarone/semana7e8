@@ -48,8 +48,8 @@ C) O código avalia a expressão booleana, imprime `true` e, em seguida, verific
 
 D) O código avalia a expressão booleana, imprime `false` e ordena os valores em ordem crescente.
 
-**R: Alternativa "a". Se o resto de 10 dividido por 3 = 1 E 6 vezes 2 = 12 que é > p OU 3 + 6 = 9 que é < 10;
-Então, vai imprimir: true;
+**R: Alternativa "a". Se o resto de 10 dividido por 3 = 1 E 6 vezes 2 = 12 que é > p(10) OU 3 + 6 = 9 que é < 10;
+Então, vai imprimir: true, pois, todas essas contas são verdadeiras!
 Depois, vai calcular o produto e imprimir o resultado.** 
 
 ______

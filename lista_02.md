@@ -37,7 +37,6 @@ for (let j = 0; j < valores.length; j++) {
 
 console.log("O produto dos valores é:", produto);
 
-
 ```
 Qual das seguintes alternativas melhor descreve o que o código faz?
 
@@ -49,7 +48,9 @@ C) O código avalia a expressão booleana, imprime `true` e, em seguida, verific
 
 D) O código avalia a expressão booleana, imprime `false` e ordena os valores em ordem crescente.
 
-**R: Alternativa "a".**
+**R: Alternativa "a". Se o resto de 10 dividido por 3 = 1 E 6 vezes 2 = 12 que é > p OU 3 + 6 = 9 que é < 10;
+Então, vai imprimir: true;
+Depois, vai calcular o produto e imprimir o resultado.** 
 
 ______
 

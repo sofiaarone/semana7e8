@@ -139,7 +139,7 @@ C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Vo
 
 D) O código verifica se a idade é menor de 18, entre 18 e 60 ou acima de 60, imprimindo uma mensagem específica para cada caso.
 
-**R: Alternativa "b".**
+**R: Alternativa "b". Se a idade for maior ou igual a 18 e menor que 60, então a pessoaa é adulta. Porém, se a iddae for <18, então é menor de idade. Resto: A pessoa está na melhor idade**
 ______
 
 **4)** Qual será o resultado impresso no console após a execução do seguinte código?

@@ -113,7 +113,7 @@ C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -20
 
 D) Ambas as funções exibirão: 'Seu crédito foi aprovado Saldo disponível: 500.'
 
-**R: Alternativa "a".**
+**R: A alternativa "a" é a correta. Pois, o exercício contém duas funções (analisarCredito1() e analisarCredito2()) que verificam se um cliente tem crédito aprovado com base nos seus gastos e em um limite de crédito de 5000 unidades. Ambas as funções somam os valores de um array de compras ([2500, 1200, 800, 100]) e determinam se o crédito foi aprovado ou negado. Portanto,sSe o total das compras ultrapassar o limite: O crédito é negado. Caso o total for menor ou igual ao limite: O crédito é aprovado.**
 ______
 
 **3)** Considere o seguinte trecho de código em JavaScript:
@@ -209,7 +209,7 @@ Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
 Dispositivo 5 não pode ser ligado. Energia insuficiente.
 
-**R) Alternativa "a".**
+**R) Alternativa "a". Isto porque o exercício trata da gestão de energia para ligar dispositivos com uma energia inicial de 1200 unidades e uma bateria extra de 400 unidades. Assim, o código verifica se cada dispositivo pode ser ligado usando a energia disponível, a bateria extra ou, em caso de falta de ambas, exibe uma mensagem de "Energia insuficiente".**
 ______
 
 **5)** Qual é a principal função do método update() em um jogo desenvolvido com Phaser.js?
@@ -256,6 +256,29 @@ Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
 Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
+
+**R:**
+
+```javascript
+INÍCIO
+    ESCREVA "Digite o valor total da compra:"
+    LEIA valorCompra
+
+    SE valorCompra < 50.00 ENTÃO
+        ESCREVA "Frete não disponível!"
+    SENÃO SE valorCompra >= 50.00 E valorCompra <= 199.99 ENTÃO
+        ESCREVA "Frete com custo adicional!"
+    SENÃO
+        ESCREVA "Frete grátis!"
+    FIM SE
+FIM // SE condição ENTÃO
+       Comando se verdadeiro
+SENÃO
+    // Comando se falso
+FIM SE
+```
+
+
 ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.

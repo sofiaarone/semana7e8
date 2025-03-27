@@ -257,7 +257,7 @@ Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
 
-**R:**
+**Resposta:**
 
 ```javascript
 INÍCIO
@@ -273,8 +273,8 @@ INÍCIO
     FIM SE
 FIM // SE condição ENTÃO
        Comando se verdadeiro
-SENÃO
-    // Comando se falso
+// SENÃO
+     Comando se falso
 FIM SE
 ```
 
@@ -296,6 +296,69 @@ Método CalcularConsumo():
 ```
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
+
+**Resposta:**
+
+```javascript
+CLASSE Veiculo
+    ATRIBUTOS:
+        modelo
+        ano
+
+    MÉTODO Construtor(modelo, ano)
+        ESTE.modelo = modelo // = significa "recebe"
+        ESTE.ano = ano
+
+    MÉTODO CalcularConsumo(distancia, eficiencia)
+
+FIM CLASSE
+
+CLASSE Carro HERDA Veiculo
+    ATRIBUTOS:
+        eficiencia  // km por litro
+
+    MÉTODO Construtor(modelo, ano, eficiencia)
+        CHAMAR SUPER.Construtor(modelo, ano)
+        ESTE.eficiencia = eficiencia
+
+    MÉTODO CalcularConsumo(distancia)
+        SE eficiencia > 0 ENTAO
+            RETORNE distancia / eficiencia
+        SENÃO
+            ESCREVA "Eficiência inválida!"
+            RETORNE -1
+        FIM SE
+FIM CLASSE
+
+CLASSE Moto HERDA Veiculo
+    ATRIBUTOS:
+        eficiencia  // km por litro
+
+    MÉTODO Construtor(modelo, ano, eficiencia)
+        CHAMAR SUPER.Construtor(modelo, ano)
+        ESTE.eficiencia ← eficiencia
+
+    MÉTODO CalcularConsumo(distancia)
+        SE eficiencia > 0 ENTAO
+            RETORNE distancia / eficiencia
+        SENÃO
+            ESCREVA "Eficiência inválida!"
+            RETORNE -1
+        FIM SE
+FIM CLASSE
+
+// Exemplo de uso
+INÍCIO
+    carro1 = NOVO Carro("Jeep", 2022, 12)
+    moto1 = NOVO Moto("Esportiva", 2023, 25)
+
+    consumoCarro = carro1.CalcularConsumo(240)  // 240 km percorridos
+    consumoMoto = moto1.CalcularConsumo(240)    // 240 km percorridos
+
+    ESCREVA "Consumo do Carro: ", consumoCarro, " litros"
+    ESCREVA "Consumo da Moto: ", consumoMoto, " litros"
+FIM
+```
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
@@ -309,6 +372,37 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+**Resposta:**
+
+```javascript
+INÍCIO
+    // Definindo as variáveis
+    ESCREVA "Digite a velocidade inicial (m/s):"
+    LEIA velocidadeInicial
+
+    ESCREVA "Digite a taxa de desaceleração (m/s²):"
+    LEIA desaceleracao
+
+    ESCREVA "Digite a velocidade segura para pouso (m/s):"
+    LEIA velocidadeSegura
+
+    ESCREVA "Digite o tempo máximo permitido (s):"
+    LEIA tempoMaximo
+
+    // cálculo do tempo necessário
+    tempo = (velocidadeInicial - velocidadeSegura) / desaceleracao
+
+    // verifica se o tempo está dentro dos limites usando "condicionais" em pseudocódigo
+    SE tempo > tempoMaximo ENTAO
+        ESCREVA "Tempo excede o limite permitido e um ajuste é necessário."
+    SENÃO SE tempo < 0 ENTAO
+        ESCREVA "Parâmetros inválidos! Verifique a entrada de dados e faça os ajustes necessários."
+    SENÃO
+        ESCREVA "Tempo necessário para pouso seguro: ", tempo, " segundos."
+    FIM SE
+FIM
+```
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
@@ -341,3 +435,33 @@ Escrever("Total de investimentos acumulados:")
 ImprimirMatriz(totalInvestimentos)  
 ```
 Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
+
+**Resposta:**
+```javascript
+Função MultiplicarMatrizesInvestimento(matrizA, matrizB):  
+    // Verifica se a multiplicação é possível
+ (colunas de A == linhas de B)  
+    Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:  
+        Retorna "As matrizes não podem ser multiplicadas pois as dimensões são incompatíveis."  
+    Senão:  
+        linhasA = tamanho(matrizA)  
+        colunasA = tamanho(matrizA[0])  
+        colunasB = tamanho(matrizB[0])  
+        matrizResultado = novaMatriz(linhasA, colunasB)  
+
+        // Loop para multiplicar as matrizes  
+        Para i de 0 até linhasA - 1 faça:  
+            Para j de 0 até colunasB - 1 faça:  
+                matrizResultado[i][j] = 0  
+                Para k de 0 até colunasA - 1 faça:  
+                    matrizResultado[i][j] = matrizResultado[i][j] + (matrizA[i][k] * matrizB[k][j])  
+
+        Retornar matrizResultado  
+// Exemplo de uso da função  
+investimentos = [[1000, 2000], [1500, 2500]]  
+fatoresCrescimento = [[1.1, 0.9], [1.2, 1.3]]  
+
+resultadoInvestimentos = MultiplicarMatrizesInvestimento(investimentos, fatoresCrescimento)  
+Escrever("Impacto financeiro dos investimentos:")  
+ImprimirMatriz(resultadoInvestimentos)
+```
